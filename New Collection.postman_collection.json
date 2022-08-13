@@ -1,0 +1,55 @@
+{
+	"info": {
+		"_postman_id": "3d4d489f-bb4a-4068-972f-7639f5a5f159",
+		"name": "New Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "18017178"
+	},
+	"item": [
+		{
+			"name": "AddPlot",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "scheduleIrrigationPlan",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"test\",\r\n    \"type\": \"name\",\r\n    \"cronExpression\":\"0/10 * * ? * * *\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/plots/1/irrigation_plans",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"plots",
+						"1",
+						"irrigation_plans"
+					]
+				},
+				"description": "Irrigation"
+			},
+			"response": []
+		}
+	]
+}
