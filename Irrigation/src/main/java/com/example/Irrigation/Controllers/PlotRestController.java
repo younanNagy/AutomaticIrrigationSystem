@@ -49,19 +49,10 @@ public class PlotRestController {
 
 
     @RequestMapping(value = "/plots/{id}/irrigation_plans", method = RequestMethod.POST)
-    boolean addIrrigationPlan(@RequestBody IrrigationPlan irrigation_plan,@PathVariable("id") Long plot_id)
-    {
-
-//        System.out.println(irrigation_plan);
-//        System.out.println(irrigation_plan.getName());
-//        System.out.println(irrigation_plan.getType());
-//
+    boolean addIrrigationPlan(@RequestBody IrrigationPlan irrigation_plan,@PathVariable("id") Long plot_id) {
         return plot_service.scheduleIrrigationPlanForPlot(plot_id,irrigation_plan);
     }
 
 
-//    curl -H "Content-type: application/json" -X POST -d "{\"area\": \"america\"}" "http://localhost:8080/plots/"
-
-    //curl -H "Content-type: application/json" -X POST -d "{\"name\":\"name\", \"group\":\"group\"}" "http://localhost:8080/plots/1/irrigation_plans"
 
 }

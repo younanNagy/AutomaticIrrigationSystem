@@ -18,8 +18,6 @@ import java.util.List;
 @Service
 public class PlotService {
 
-    @Value("${iot_devices_url}")
-    private String iot_devices_url;
     @Autowired
     PlotRepo plot_repo;
     @Autowired
