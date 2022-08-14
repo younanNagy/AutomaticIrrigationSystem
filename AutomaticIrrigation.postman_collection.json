@@ -9,8 +9,30 @@
 		{
 			"name": "AddPlot",
 			"request": {
-				"method": "GET",
-				"header": []
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"area\": \"Egypt\",\r\n    \"plot_name\": \"first\",\r\n    \"iot_device_id\": \"1\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/plots/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"plots",
+						""
+					]
+				}
 			},
 			"response": []
 		},
@@ -48,6 +70,26 @@
 					]
 				},
 				"description": "Irrigation"
+			},
+			"response": []
+		},
+		{
+			"name": "GetAllPlots",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/plots/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"plots",
+						""
+					]
+				}
 			},
 			"response": []
 		}
